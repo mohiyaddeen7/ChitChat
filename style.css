@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.rightMesage{
+    align-self: flex-end;
+}
+
+.leftMessage{
+    align-self:auto;
+}

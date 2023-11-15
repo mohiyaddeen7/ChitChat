@@ -13,6 +13,7 @@ form.addEventListener("submit", (e) => {
   appendFunc("You : " + sendMessage, "right");
   socket.emit("send-message", sendMessage);
   messageInput.value = "";
+  messageSection.scrollTo(0,messageSection.scrollHeight)
 });
 
 

@@ -28,7 +28,4 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("leftEvent", users[socket.id]);
     delete users[socket.id];
   });
-
-  const count = io.engine.clientsCount;
-  console.log(count);
 });

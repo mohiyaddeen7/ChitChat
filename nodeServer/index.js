@@ -24,11 +24,11 @@ io.on("connection", (socket) => {
     });
   });
 
-  socket.on('disconnect',message=>{
-    socket.broadcast.emit('leftEvent',users[socket.id]);
-    delete users[socket.id]
-  })
-  
-const count = io.engine.clientsCount
-console.log(count)
+  socket.on("disconnect", (message) => {
+    socket.broadcast.emit("leftEvent", users[socket.id]);
+    delete users[socket.id];
+  });
+
+  const count = io.engine.clientsCount;
+  console.log(count);
 });

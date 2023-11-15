@@ -13,9 +13,12 @@ form.addEventListener("submit", (e) => {
   appendFunc("You : " + sendMessage, "right");
   socket.emit("send-message", sendMessage);
   messageInput.value = "";
-  messageSection.scrollTo(0,messageSection.scrollHeight)
+  messageSection.scrollTo({
+    top: messageSection.scrollHeight,
+    left: 0,
+    behavior: "smooth",
+  });
 });
-
 
 const userName = prompt("Enter your Name to join");
 
@@ -40,7 +43,6 @@ socket.on("receive", (data) => {
   appendFunc(data.userName + " : " + data.message, "left");
 });
 
-
-socket.on("leftEvent",message=>{
-    appendFunc(message+" left the chat", "left")
-})
+socket.on("leftEvent", (message) => {
+  appendFunc(message + " left the chat", "left");
+});

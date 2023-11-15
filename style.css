@@ -6,8 +6,9 @@
 
 .rightMesage{
     align-self: flex-end;
+    padding: 0.5rem;
 }
 
-.leftMessage{
-    align-self:auto;
+.leftMesage{
+    padding: 0.5rem;
 }

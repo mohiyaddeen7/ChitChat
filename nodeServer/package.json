@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install-server": "cd backend && npm install",
-    "start-server": "cd backend && node index.js"
+    "install-server": "cd nodeServer && npm install",
+    "start-server": "cd nodeServer && node index.js"
   },
   "author": "Mohiyaddeen Raza",
   "license": "ISC",
